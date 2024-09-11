@@ -30,6 +30,8 @@ h5 {
     width: 6px; /* Ancho de la línea vertical */
     height: 100%;
     background-color: #c47a07; /* Color de la línea vertical */
+    border-top-left-radius: 10px; /* Redondeo para la esquina superior izquierda */
+    border-bottom-left-radius: 10px; /* Redondeo para la esquina inferior izquierda */
 }
 
 .icon-row {
