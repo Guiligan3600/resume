@@ -46,6 +46,10 @@ h5 {
     height: 70px;
 }
 
+.general_text_list {
+    padding-left: 0px;
+}
+
 .general_text_list li {
     list-style-type: none; /* Quitar el estilo de lista predeterminado */
     margin-bottom: 10px;
