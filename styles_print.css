@@ -1,0 +1,199 @@
+#download-pdf {
+    display: none;
+}
+
+
+[data-aos] {
+    /*animation: none !important; /* Desactiva animaciones para impresión */
+    /*visibility: visible !important; /* Asegura que los elementos sean visibles */
+    /*display: inline-block !important; */
+    /*opacity: 1 !important; /* Asegura que la opacidad sea 1 */
+}
+
+
+body {
+    font-family: 'Lato', sans-serif; /* Fuente formal pero moderna */
+    background-color: #ffffff;
+    color: #333333; /* Gris oscuro para el texto principal */
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 5px;
+    color: var(--bs-card-color);
+}
+
+
+h5 {
+    font-family: ui-monospace;
+    font-size: 1.5rem;
+    color: #656565;
+}
+
+.company {
+    font-size: 1em;
+}
+
+.item-important {
+    position: relative;
+    padding-left: 15px; /* Espacio para la línea vertical */ 
+    background-color: #f5f5f5;
+    padding-right: 15px;
+}
+
+.item-important::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px; /* Ancho de la línea vertical */
+    height: 100%;
+    background-color: #c47a07; /* Color de la línea vertical */
+    border-top-left-radius: 10px; /* Redondeo para la esquina superior izquierda */
+    border-bottom-left-radius: 10px; /* Redondeo para la esquina inferior izquierda */
+}
+
+.icon-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los iconos ocupen varias filas si es necesario */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.icon-row a img {
+    width: 30px;
+    height: 30px;
+}
+
+.general_text_list {
+    padding-left: 0px;
+}
+
+.general_text_list li {
+    list-style-type: none; /* Quitar el estilo de lista predeterminado */
+    margin-bottom: 10px;
+}
+.general_text_list li::before {
+    content: "\f00c"; /* Código Unicode del ícono de check */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #c47a07;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #626262; /* Gray color */
+    color: #c47a07;
+    text-align: center;
+    margin: 0 10px;
+    font-size: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Shadow around icons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.social-icons a:hover {
+    background-color: #c47a07; /* Darker color on hover */
+    transform: scale(1.1); /* Slightly increase size */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+    color: white;
+}
+
+.header {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    position: relative;
+    background-image: url('images/background.jpg'); /* Replace with your local image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    color: #b7b7b7;
+}
+
+
+.p-header {
+    color: #cbcbcb;
+    font-size: 1.4rem;
+    font-family: system-ui;
+}
+
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Push behind content */
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-family: system-ui;
+}
+
+.header p {
+    margin: 0.3rem 0;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #c47a07;
+}
+
+
+.section {
+    padding-top: 0.25rem !important;
+}
+
+
+.pt-5 {
+    padding-top: 3rem !important;
+}
+
+.py-5 {
+    padding-bottom: 0.10rem !important;
+}
+
+
+.section-title {
+    font-size: 1.5rem;
+    color: #555555;
+    border-bottom: 3px solid #cccccc;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    font-family: system-ui;
+    font-weight: bold;
+
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+.highlight {
+    color: #c47a07; /* Color resaltado */
+}
+
+.footer {
+    background-color: #c47a07;
+    color: #333333;
+}
+
+.general_text {
+    font-size: 0.8em;
+    font-family: system-ui;
+    text-align: justify;
+}

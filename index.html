@@ -12,6 +12,7 @@
     <!-- Import Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_print.css" media="print">
 </head>
 <body>
 
@@ -40,6 +41,10 @@
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
+            </div>
+            <!-- Button to trigger PDF download -->
+            <div class="mt-3">
+                <button id="download-pdf" class="btn btn-primary">Versión Para Impresión</button>
             </div>
         </div>
         
@@ -230,6 +235,35 @@
 
     <script>
         AOS.init();
+
+        // JavaScript to trigger print dialog for PDF download
+        document.getElementById('download-pdf').addEventListener('click', function() {
+            // Iterar sobre todos los elementos con el atributo data-aos
+            document.querySelectorAll('[data-aos]').forEach(function(el) {
+                // Guardar el valor original de data-aos
+                el.dataset.originalAos = el.getAttribute('data-aos');
+                
+                // Establecer data-aos a una cadena vacía para desactivar las animaciones
+                el.setAttribute('data-aos', '');
+            });
+
+            // Abrir el diálogo de impresión o generar el PDF
+            window.print();
+        });
+
+        window.onafterprint = function() {
+            // Restaurar el valor original de data-aos
+            document.querySelectorAll('[data-aos]').forEach(function(el) {
+                // Restaurar el valor original de data-aos
+                if (el.dataset.originalAos !== undefined) {
+                    el.setAttribute('data-aos', 'fade-up');
+                }
+            });
+
+            // Re-iniciar AOS si es necesario
+            AOS.init();
+        };
+
     </script>
 </body>
 </html>
